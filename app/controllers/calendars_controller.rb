@@ -34,7 +34,6 @@ class CalendarsController < ApplicationController
       plans.each do |plan|
         today_plans.push(plan.plan) if plan.date == @todays_date + x
       end
-      
       wday_num = @todays_date.wday + x
       # wdayメソッドの引数のため、7以上の場合7を引いて0〜６の範囲に調整する
       if wday_num >= 7 
